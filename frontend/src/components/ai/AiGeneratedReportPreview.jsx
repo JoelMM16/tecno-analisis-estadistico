@@ -1,0 +1,4 @@
+export default function AiGeneratedReportPreview({ report }) {
+  if (!report) return <article className="document-preview"><h3>Vista previa del informe</h3><p>Genera un informe para ver la estructura formal aqui.</p></article>;
+  return <article className="document-preview"><header><span>QualityData AI</span><h2>{report.titulo || "Informe Ejecutivo de Calidad"}</h2><p>{report.subtitulo || "Empresa Textil de Uniformes"}</p></header><section><h3>Resumen ejecutivo</h3><p>{report.resumen || report.informe}</p></section><section><h3>Problemas principales</h3><ul>{(report.problemas || report.problemasPrincipales || []).map((p, i) => <li key={i}>{p}</li>)}</ul></section><section><h3>Recomendaciones</h3><ul>{(report.recomendaciones || []).map((r, i) => <li key={i}>{r}</li>)}</ul></section><section><h3>Conclusion</h3><p>{report.conclusion}</p></section></article>;
+}

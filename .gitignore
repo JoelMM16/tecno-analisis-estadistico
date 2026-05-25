@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+backend/.env
+backend/*.sqlite
+backend/*.sqlite-shm
+backend/*.sqlite-wal
+qualitydata-dashboard.png
+backend/src/uploads/*
+!backend/src/uploads/.gitkeep
+docx_render_check/
